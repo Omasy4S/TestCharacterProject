@@ -59,8 +59,7 @@ public class GameEngine
     public void InflictDamage(Character attack, IWeapon weapon, Character target)
     {
         int Damage = weapon.CalcDamage(attack);
-        Console.WriteLine("Начало битвы\n==========");
-        Console.WriteLine($"Нанесено Урона {Damage}");
+        Console.WriteLine("Начало битвы\n==========\n" + $"Нанесено Урона {Damage}");
         target.Health = Math.Max(0,target.Health - Damage);
     }
 
@@ -99,15 +98,7 @@ public class GameEngine
     static void WtiteInfo(Character characterInf, Character targetInf)
     {
         
-        Console.WriteLine("Атакующий");
-        Console.WriteLine(characterInf.Strength);
-        Console.WriteLine(characterInf.Magic);
-        Console.WriteLine(characterInf.Health);
-        Console.WriteLine("\nЦель");
-        Console.WriteLine(targetInf.Strength);
-        Console.WriteLine(targetInf.Magic);
-        Console.WriteLine(targetInf.Health);
-
-        Console.WriteLine("==========\nКонец битвы\n");
+        Console.WriteLine("Атакующий\n" + characterInf.Strength + "\n" + characterInf.Magic + "\n" + characterInf.Health + "\n\nЦель\n" + 
+            targetInf.Strength + "\n" + targetInf.Magic +"\n" + targetInf.Health + "\n" + "==========\nКонец битвы\n");
     }
 }
